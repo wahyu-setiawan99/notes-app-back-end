@@ -49,7 +49,7 @@ const getNoteByIdHandler = (request, h) => {
 
   const note = notes.filter((n) => n.id === id)[0];
 
-  if (note !== 'undefined') {
+  if (note !== undefined) {
     return {
       status: 'success',
       data: {
@@ -60,7 +60,7 @@ const getNoteByIdHandler = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Reocrd is not found',
+    message: 'Record is not found',
   });
 
   response.code(404);
